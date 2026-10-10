@@ -1,0 +1,20 @@
+{
+	"start": "meow",
+	"starts": [
+		{"if_flag": "mochi_found", "node": "home"}
+	],
+	"nodes": {
+		"meow": {
+			"speaker": "Mochi",
+			"text": "Mew? (An orange kitten with a white-tipped tail blinks up at you.)",
+			"choices": [
+				{"text": "Lina misses you. Let's get you home.", "if_flag": "quest_mochi", "set_flag": "mochi_found", "next": "follow"},
+				{"text": "Pet the kitten.", "unless_flag": "mochi_petted", "effects": {"empathy": 1}, "reason": "Comforted a lost, frightened kitten", "set_flag": "mochi_petted", "next": "purr"},
+				{"text": "Leave."}
+			]
+		},
+		"purr": {"speaker": "Mochi", "text": "Purrrr... (Mochi leans into your hand. She seems a little less scared.)", "next": "meow"},
+		"follow": {"speaker": "Mochi", "text": "(Mochi perks up at Lina's name and scampers off toward the village.)"},
+		"home": {"speaker": "Mochi", "text": "Purrrr."}
+	}
+}

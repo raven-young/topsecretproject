@@ -1,0 +1,17 @@
+{
+	"quest_explore": {
+		"title": "Beyond Brightvale",
+		"desc": "Elder Bram urged you to explore the island and find the treasures of the fallen star. He mentioned a dark cave to the west, a hill of braziers to the north-east and a pillar in the south-eastern lake.",
+		"done_flag": ""
+	},
+	"quest_slime": {
+		"title": "Slime Trouble",
+		"desc": "Defeat a slime for Guard Tomas at the east gate, then report back to him.",
+		"done_flag": "slime_reward_given"
+	},
+	"quest_mochi": {
+		"title": "Lost Kitten",
+		"desc": "Find Lina's orange kitten Mochi somewhere near the big hill to the north-east, then tell Lina.",
+		"done_flag": "mochi_returned"
+	}
+}

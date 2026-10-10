@@ -1,0 +1,35 @@
+{
+	"start": "ask",
+	"starts": [
+		{"if_flag": "sela_helped", "node": "after"},
+		{"if_flag": "sela_forgiven", "node": "ask"},
+		{"if_flag": "sela_scorned", "node": "cold"}
+	],
+	"nodes": {
+		"ask": {
+			"text": "Spare a coin for an old traveller? I've walked further than anyone in this valley, you know.",
+			"choices": [
+				{"text": "Here, take 5 gold.", "require": {"gold": 5}, "gold": -5, "effects": {"kindness": 1, "alignment": 1}, "reason": "Gave coins to Old Sela", "set_flag": "sela_helped", "next": "grateful"},
+				{"text": "Tell me about your travels first.", "next": "travels"},
+				{"text": "Sorry, I have nothing to spare.", "next": "ok"},
+				{"text": "Get a job, old woman.", "unless_flag": "sela_scorned", "effects": {"kindness": -1, "alignment": -1, "humbleness": -1}, "reason": "Mocked Old Sela", "set_flag": "sela_scorned", "next": "scorn"}
+			]
+		},
+		"travels": {
+			"text": "West, a cliff like a wall, with a cave at its foot that growls at night. North-east, the hill where the star fell. South-east, a lake with a pillar reaching for the sky. Treasures hide where people fear or forget.",
+			"next": "ask"
+		},
+		"ok": {"text": "Ah, well. The road is long. May it be kind to you."},
+		"grateful": {"text": "Bless you, {name}. A secret for your kindness: the stone pillar in the lake? Climb it. The star left something at the top."},
+		"scorn": {"text": "...I had a job once. I had a lot of things once. Off with you."},
+		"cold": {
+			"text": "Hmph. Move along.",
+			"choices": [
+				{"text": "I'm sorry for what I said.", "require": {"trait": "humbleness", "min": 0}, "effects": {"humbleness": 1}, "reason": "Apologised to Old Sela", "set_flag": "sela_forgiven", "next": "forgive"},
+				{"text": "Leave."}
+			]
+		},
+		"forgive": {"text": "...Apology accepted. Words are cheap, but they're a start.", "next": "ask"},
+		"after": {"text": "The wind is kind today, {name}. Did you climb the pillar yet?"}
+	}
+}

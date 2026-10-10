@@ -1,0 +1,42 @@
+{
+	"start": "intro",
+	"starts": [
+		{"if_flag": "quest_explore", "node": "after"}
+	],
+	"nodes": {
+		"intro": {
+			"text": "Ah, {name}! You've grown restless, I can tell. Beyond our fences lies a whole island nobody in Brightvale has explored in a generation.",
+			"next": "ask"
+		},
+		"ask": {
+			"text": "They say the old star left treasures scattered across the land when it fell. Will you go and see for yourself?",
+			"choices": [
+				{"text": "Of course! Nothing scares me.", "effects": {"courage": 1, "humbleness": -1}, "reason": "Boasted to Elder Bram that nothing scares you", "set_flag": "quest_explore", "next": "brave"},
+				{"text": "I'm a little scared... but I'll go.", "effects": {"courage": 1, "humbleness": 1}, "reason": "Admitted your fear to Elder Bram, and chose to go anyway", "set_flag": "quest_explore", "next": "honest"},
+				{"text": "Maybe it's safer to stay here.", "unless_flag": "elder_hesitated", "effects": {"courage": -1}, "reason": "Hesitated in front of Elder Bram", "set_flag": "elder_hesitated", "next": "stay"}
+			]
+		},
+		"brave": {
+			"text": "Ha! Bravado is a fine cloak, but don't let it blind you. Take these herbs, and talk to Tomas at the east gate before you leave.",
+			"on_enter": {"give": {"healing_herb": 2}}
+		},
+		"honest": {
+			"text": "Courage isn't the absence of fear, child. It's walking anyway. Take these herbs, and talk to Tomas at the east gate before you leave.",
+			"on_enter": {"give": {"healing_herb": 3}}
+		},
+		"stay": {
+			"text": "Hmm. The world will still be there when you're ready. Come back when your heart is set."
+		},
+		"after": {
+			"text": "The dark cave to the west... the old miners sealed part of it after hearing strange sounds. Only the brave dare enter. The hill to the north-east has braziers no one has lit in centuries, and a stone pillar rises from the lake to the south-east.",
+			"choices": [
+				{"text": "Any advice?", "next": "advice"},
+				{"text": "Thank you, Elder."}
+			]
+		},
+		"advice": {
+			"text": "Treasure hides where people fear to go or forget to look: cliffs, hilltops, behind houses, deep in the woods. And remember, who you become out there matters more than what you carry back.",
+			"next": "after"
+		}
+	}
+}

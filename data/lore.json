@@ -1,0 +1,22 @@
+{
+	"brightvale": {
+		"title": "The Founding Stone",
+		"text": "Here the first wanderers rested after the Sky Fell. They named the valley Brightvale, for the falling star lit it like noon for forty nights."
+	},
+	"starfall": {
+		"title": "Stone of the Fallen Star",
+		"text": "The star broke upon the land. Its tears, the mana crystals, scattered to the dark places, the high places and the forgotten places. Whoever gathers them gathers the star's memory."
+	},
+	"braziers": {
+		"title": "Hill of Three Flames",
+		"text": "Three flames for the three virtues of the old order: courage to begin, kindness to share, humility to listen. Light them, and the star's gift is yours."
+	},
+	"pillar": {
+		"title": "The Sky Pillar",
+		"text": "Before the Fall, the pillar held up the edge of the sky. Now it holds only the wind, and whatever the brave leave at its top."
+	},
+	"cave": {
+		"title": "Miner's Warning",
+		"text": "Turn back. Something breathes in the deep. We sealed the lower tunnels and left the rest to the dark. (The letters are scratched by a shaking hand.)"
+	}
+}

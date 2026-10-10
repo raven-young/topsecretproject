@@ -1,0 +1,35 @@
+{
+	"start": "intro",
+	"starts": [
+		{"if_flag": "mochi_returned", "node": "happy"},
+		{"if_flag": "mochi_found", "node": "reunion"},
+		{"if_flag": "quest_mochi", "node": "waiting"},
+		{"if_flag": "lina_refused", "node": "sulk"}
+	],
+	"nodes": {
+		"intro": {
+			"text": "*sniff* M-my kitten Mochi ran away toward the big hill... and I'm not allowed to leave the village.",
+			"choices": [
+				{"text": "Don't cry. I'll find Mochi for you.", "effects": {"kindness": 1, "empathy": 1}, "reason": "Promised to find Lina's lost kitten", "set_flag": "quest_mochi", "next": "thanks"},
+				{"text": "Cats always come home. You'll see.", "next": "unsure"},
+				{"text": "Stop whining, it's just a cat.", "effects": {"kindness": -1, "empathy": -1}, "reason": "Told a crying child to stop whining", "set_flag": "lina_refused", "next": "cry"}
+			]
+		},
+		"thanks": {"text": "Really?! She's orange with a white tail. Please hurry!"},
+		"unsure": {"text": "...You think so? *sniff* But it's so far..."},
+		"cry": {"text": "*Lina bursts into tears and turns away.*"},
+		"sulk": {
+			"text": "*Lina glares at you, eyes still red.*",
+			"choices": [
+				{"text": "I'm sorry. I'll find Mochi for you.", "effects": {"empathy": 1, "humbleness": 1}, "reason": "Apologised to Lina", "set_flag": "quest_mochi", "next": "thanks"},
+				{"text": "Leave her be."}
+			]
+		},
+		"waiting": {"text": "Did you find Mochi? She's orange with a white tail! Somewhere near the big hill..."},
+		"reunion": {
+			"text": "MOCHI! You found her! Here, my lucky charm. It's yours now, you need it more than me!",
+			"on_enter": {"give": {"lucky_charm": 1}, "set_flag": "mochi_returned", "effects": {"kindness": 1}, "reason": "Reunited Lina with her kitten"}
+		},
+		"happy": {"text": "Mochi and I are going to be explorers, just like you!"}
+	}
+}

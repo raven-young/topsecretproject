@@ -1,0 +1,72 @@
+{
+	"common": {
+		"gold": [5, 15],
+		"rolls": [2, 3],
+		"entries": [
+			{"id": "wood", "weight": 5, "count": [1, 3]},
+			{"id": "iron_ore", "weight": 3, "count": [1, 2]},
+			{"id": "healing_herb", "weight": 3, "count": [1, 2]},
+			{"id": "slime_gel", "weight": 2, "count": [1, 2]},
+			{"id": "mana_crystal", "weight": 1, "count": [1, 1]}
+		]
+	},
+	"hidden": {
+		"gold": [15, 35],
+		"rolls": [2, 3],
+		"entries": [
+			{"id": "wood", "weight": 4, "count": [2, 3]},
+			{"id": "iron_ore", "weight": 4, "count": [1, 3]},
+			{"id": "mana_crystal", "weight": 3, "count": [1, 2]},
+			{"id": "healing_herb", "weight": 2, "count": [1, 2]},
+			{"id": "dust_courage", "weight": 1, "count": [1, 1]},
+			{"id": "dust_empathy", "weight": 1, "count": [1, 1]},
+			{"id": "dust_humbleness", "weight": 1, "count": [1, 1]},
+			{"id": "dust_kindness", "weight": 1, "count": [1, 1]}
+		]
+	},
+	"puzzle": {
+		"gold": [30, 60],
+		"guaranteed": {"mana_crystal": 2, "dust_kindness": 1},
+		"rolls": [2, 2],
+		"entries": [
+			{"id": "iron_ore", "weight": 3, "count": [2, 3]},
+			{"id": "wood", "weight": 2, "count": [2, 4]},
+			{"id": "dust_humbleness", "weight": 1, "count": [1, 1]}
+		]
+	},
+	"pillar": {
+		"gold": [40, 70],
+		"guaranteed": {"mana_crystal": 2, "dust_empathy": 1},
+		"rolls": [1, 2],
+		"entries": [
+			{"id": "iron_ore", "weight": 2, "count": [2, 3]},
+			{"id": "potion", "weight": 1, "count": [1, 1]}
+		]
+	},
+	"cave": {
+		"gold": [40, 60],
+		"guaranteed": {"dust_courage": 1, "mana_crystal": 2, "iron_ore": 2},
+		"rolls": [1, 1],
+		"entries": [
+			{"id": "slime_gel", "weight": 2, "count": [1, 2]},
+			{"id": "potion", "weight": 1, "count": [1, 1]}
+		]
+	},
+	"house": {
+		"gold": [10, 20],
+		"rolls": [1, 2],
+		"entries": [
+			{"id": "healing_herb", "weight": 2, "count": [1, 2]},
+			{"id": "wood", "weight": 1, "count": [1, 2]}
+		]
+	},
+	"slime": {
+		"gold": [1, 4],
+		"rolls": [1, 1],
+		"entries": [
+			{"id": "slime_gel", "weight": 6, "count": [1, 2]},
+			{"id": "healing_herb", "weight": 1, "count": [1, 1]},
+			{"id": "", "weight": 2}
+		]
+	}
+}

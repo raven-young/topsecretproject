@@ -1,0 +1,29 @@
+{
+	"start": "intro",
+	"starts": [
+		{"if_flag": "slime_reward_given", "node": "idle"},
+		{"if_flag": ["quest_slime", "first_monster_killed"], "node": "done"},
+		{"if_flag": "quest_slime", "node": "waiting"}
+	],
+	"nodes": {
+		"intro": {
+			"text": "Halt! Oh, it's you, {name}. Slimes keep oozing up to the gate and my knees aren't what they used to be. Would you deal with one for me?",
+			"choices": [
+				{"text": "Leave it to me!", "effects": {"courage": 1}, "reason": "Accepted Guard Tomas's challenge", "set_flag": "quest_slime", "next": "accept"},
+				{"text": "You look exhausted. Rest, I'll handle it.", "require": {"trait": "kindness", "min": 2}, "effects": {"courage": 1, "empathy": 1}, "reason": "Offered to help a tired Guard Tomas", "set_flag": "quest_slime", "next": "grateful"},
+				{"text": "Isn't that your job?", "unless_flag": "tomas_refused", "effects": {"empathy": -1}, "reason": "Brushed off Guard Tomas", "set_flag": "tomas_refused", "next": "refuse"},
+				{"text": "I'm... scared of slimes.", "unless_flag": "tomas_scared", "effects": {"courage": -1}, "reason": "Told Tomas you were scared of slimes", "set_flag": "tomas_scared", "next": "scared"}
+			]
+		},
+		"accept": {"text": "That's the spirit! They hop around the meadows east of the gate. Hit them before they hit you."},
+		"grateful": {"text": "Bless you. Not many folk notice an old guard's tired bones. The slimes are east of the gate. Come back and tell me when it's done."},
+		"refuse": {"text": "Hmph. It is, and I'm doing it. Badly. Forget I asked."},
+		"scared": {"text": "Ha! They're mostly jelly. Come back when you're ready."},
+		"waiting": {"text": "Still out there, isn't it? The slimes hop around the meadows east of the gate."},
+		"done": {
+			"text": "You actually did it! Here, iron ore from the old mine. A clever crafter can turn it into something sharp.",
+			"on_enter": {"give": {"iron_ore": 3}, "set_flag": "slime_reward_given"}
+		},
+		"idle": {"text": "Quiet day at the gate, thanks to you. The dark cave to the west, though? Even I don't go there."}
+	}
+}

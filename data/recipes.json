@@ -1,0 +1,9 @@
+[
+	{"output": "iron_sword", "inputs": {"wood": 2, "iron_ore": 3}},
+	{"output": "crystal_staff", "inputs": {"wood": 2, "mana_crystal": 3}},
+	{"output": "iron_bow", "inputs": {"wood": 3, "iron_ore": 2}},
+	{"output": "leather_tunic", "inputs": {"wood": 1, "slime_gel": 3}},
+	{"output": "iron_mail", "inputs": {"iron_ore": 5, "slime_gel": 2}},
+	{"output": "mana_charm", "inputs": {"mana_crystal": 2, "iron_ore": 1}},
+	{"output": "potion", "count": 1, "inputs": {"healing_herb": 2, "slime_gel": 1}}
+]

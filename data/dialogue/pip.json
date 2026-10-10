@@ -1,0 +1,23 @@
+{
+	"start": "hello",
+	"nodes": {
+		"hello": {
+			"text": "Pip's Curiosities! Herbs, rumours, and the occasional miracle. What'll it be?",
+			"choices": [
+				{"text": "Buy a Healing Herb (5 gold)", "require": {"gold": 5}, "gold": -5, "give": {"healing_herb": 1}, "next": "hello"},
+				{"text": "Buy 3 Wood (6 gold)", "require": {"gold": 6}, "gold": -6, "give": {"wood": 3}, "next": "hello"},
+				{"text": "Any rumours?", "next": "rumor"},
+				{"text": "Distract him and pocket a crystal.", "require": {"trait": "alignment", "max": -2}, "unless_flag": "pip_robbed", "give": {"mana_crystal": 1}, "effects": {"alignment": -1, "kindness": -1}, "reason": "Stole from Pip's stall", "set_flag": "pip_robbed", "next": "robbed"},
+				{"text": "Goodbye."}
+			]
+		},
+		"rumor": {
+			"text": "Treasure loves high places, dark places and places people forget. Look for a faint golden glimmer. Oh, and the braziers on the hill? Fire doesn't care who carries it, but it does go out if you dawdle.",
+			"next": "hello"
+		},
+		"robbed": {
+			"text": "...Hm? Sorry, I thought I saw a bird. Anyway!",
+			"next": "hello"
+		}
+	}
+}

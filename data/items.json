@@ -1,0 +1,24 @@
+{
+	"wood": {"name": "Wood", "category": "craft", "desc": "Sturdy branches. The basis of most crafting."},
+	"iron_ore": {"name": "Iron Ore", "category": "craft", "desc": "Heavy, rust-red ore from the old mines."},
+	"mana_crystal": {"name": "Mana Crystal", "category": "craft", "desc": "Said to be a tear of the fallen star. It hums faintly in your hand."},
+	"slime_gel": {"name": "Slime Gel", "category": "craft", "desc": "Sticky and surprisingly tough once dried."},
+
+	"wooden_sword": {"name": "Wooden Sword", "category": "weapon", "slot": "weapon", "job": "fighter", "attack": 4, "desc": "A practice sword. Better than bare fists."},
+	"iron_sword": {"name": "Iron Sword", "category": "weapon", "slot": "weapon", "job": "fighter", "attack": 10, "desc": "A proper blade, heavy and true."},
+	"apprentice_staff": {"name": "Apprentice Staff", "category": "weapon", "slot": "weapon", "job": "mage", "attack": 4, "desc": "Channels small fire bolts. Fire can light things, too."},
+	"crystal_staff": {"name": "Crystal Staff", "category": "weapon", "slot": "weapon", "job": "mage", "attack": 11, "desc": "A mana crystal set in carved wood. Its bolts burn bright."},
+	"short_bow": {"name": "Short Bow", "category": "weapon", "slot": "weapon", "job": "ranger", "attack": 4, "desc": "Light and quick to draw."},
+	"iron_bow": {"name": "Iron-Tipped Bow", "category": "weapon", "slot": "weapon", "job": "ranger", "attack": 10, "desc": "Reinforced limbs, iron arrowheads."},
+	"leather_tunic": {"name": "Gel-Cured Tunic", "category": "weapon", "slot": "armor", "defense": 3, "max_hp": 10, "desc": "Cloth hardened with slime gel. Smells a little."},
+	"iron_mail": {"name": "Iron Mail", "category": "weapon", "slot": "armor", "defense": 7, "max_hp": 20, "desc": "Rings of iron. Heavy, but you'll feel safe."},
+	"lucky_charm": {"name": "Lina's Lucky Charm", "category": "weapon", "slot": "accessory", "attack": 2, "defense": 2, "desc": "A pebble on a string. Lina swears it's lucky."},
+	"mana_charm": {"name": "Mana Charm", "category": "weapon", "slot": "accessory", "attack": 4, "desc": "A crystal shard bound in iron wire."},
+
+	"healing_herb": {"name": "Healing Herb", "category": "other", "use": "heal", "amount": 25, "desc": "Restores 25 HP."},
+	"potion": {"name": "Healing Potion", "category": "other", "use": "heal", "amount": 70, "desc": "Restores 70 HP."},
+	"dust_courage": {"name": "Dust of Courage", "category": "other", "use": "trait", "trait": "courage", "amount": 1, "desc": "Glittering red dust. Breathing it in steadies your heart. (+1 Courage)"},
+	"dust_empathy": {"name": "Dust of Empathy", "category": "other", "use": "trait", "trait": "empathy", "amount": 1, "desc": "Soft blue dust that makes the world feel closer. (+1 Empathy)"},
+	"dust_humbleness": {"name": "Dust of Humility", "category": "other", "use": "trait", "trait": "humbleness", "amount": 1, "desc": "Plain grey dust. Strangely calming. (+1 Humbleness)"},
+	"dust_kindness": {"name": "Dust of Kindness", "category": "other", "use": "trait", "trait": "kindness", "amount": 1, "desc": "Warm golden dust that smells of bread. (+1 Kindness)"}
+}
